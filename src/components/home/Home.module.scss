@@ -1,0 +1,11 @@
+@use '../../styles/variables';
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

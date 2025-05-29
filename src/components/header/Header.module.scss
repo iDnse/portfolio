@@ -1,0 +1,134 @@
+@use '../../styles/variables' as *;
+
+.containerHeader{
+    width:100vw;
+    z-index: 1000;
+    position:fixed;
+    top: 32px;
+    color: $light;
+    display: flex;
+    justify-content: center;
+
+    .navbar {
+        width: 780px;
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $aqua;
+        border-radius: 20px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);;
+
+        .title{
+            color: $mostaza;
+            font-size: $text-large;
+        }
+        
+        .navbarLink{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+
+            .link{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 8px;
+
+                li{
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        padding-bottom: 2px;
+                        display: inline-block;
+                        font-size: $text-large;
+                    }
+
+                    a::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $mostaza; 
+                        transition: width 0.5s ease; 
+                    }
+                    a:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .traslate{
+                padding: 0 8px;
+                font-size: $text-large;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $aqua;
+                background-color: $light;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .containerHeader{
+        .navbar{
+            width: 95%;
+
+            .title{
+                font-size: $text-small;
+            }
+
+
+            .navbarLink{
+                .link{
+                    li{
+                        a{
+                            font-size: $text-small;
+                        }
+                    }
+                }
+                .traslate{
+                font-size: $text-small;
+            }
+            }
+
+
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .containerHeader{
+        .navbar{
+
+            .title{
+                font-size: $text-xxsmall;
+            }
+
+
+            .navbarLink{
+                .link{
+                    li{
+                        a{
+                            font-size: $text-xxsmall;
+                        }
+                    }
+                }
+                .traslate{
+                font-size: $text-xxsmall;
+            }
+            }
+
+
+        }
+
+    }
+}
