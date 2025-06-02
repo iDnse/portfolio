@@ -63,14 +63,18 @@
             }
 
             .traslate{
-                padding: 0 8px;
-                font-size: $text-large;
+                width: auto;
+                height: 40px;
+                font-weight: bold;
+                font-family: 'Sansita';
+                padding: 8px;
+                font-size: $text-medium;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 color: $aqua;
                 background-color: $light;
-                border-radius: 30px;
+                border-radius: 10px;
             }
         }
     }

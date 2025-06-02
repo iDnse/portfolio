@@ -1,0 +1,102 @@
+@use '../../../styles/variables' as *;
+
+.section{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        width: 780px;
+        padding: 12px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 48px;
+
+        .containerImg{
+            width: 600px;
+            height: auto;
+            padding: 4px;
+            background-color: $mostaza;
+            border-radius: 20%;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 90%;
+                border-radius: 20%;
+            }
+        }
+
+        .containerCard{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            h2{
+            color: $mostaza;
+            font-size: $text-large;
+            }
+
+            article{
+                color: $light;
+                font-size: $text-medium;
+            }
+
+            .containerButton{
+                display: flex;
+                justify-content: left;
+
+                button{
+                    width: auto;
+                    height: 40px;
+                    font-weight: bold;
+                    font-family: 'Sansita';
+                    padding: 8px;
+                    font-size: $text-medium;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $aqua;
+                    background-color: $light;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 780px) {
+
+    .section{
+        .container{
+            width: 95%;
+            min-width: 400px;
+            .containerImg{
+                min-width: 180px;
+                img{
+
+                }
+            }
+            .containerCard{
+                min-width: 280px;
+                max-height: 235px;
+                h2{
+                    font-size: $text-regular;
+                }
+                article{
+                    font-size: $text-small;
+                }
+                .containerButton{
+                    button{
+                        font-size: $text-small;
+                    }
+                }
+            }
+        }
+    }
+}

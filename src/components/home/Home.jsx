@@ -1,21 +1,19 @@
 import styles from './Home.module.scss'
-import profile from '../../assets/img/img.png'
-
+import TechTicker from './techTicker/TechTicker'
+import AboutMe from './aboutMe/AboutMe'
 
 function Home() {
   return (
     <>
-    <section className={styles.section}>
-      {/* <img src={profile} alt="nuevo" /> */}
+    <section>
       <div>
-      <h2>Hey!, I’m Pedro Jesus García</h2>
-      <article>Frontend Web Developer focused on building fast, responsive, and accessible web applications. I specialize in HTML5, CSS3, JavaScript, and React, with experience turning wireframes into efficient, user-friendly interfaces.</article>
-      <div>
-        <button>Contact me</button>
-        <button>CV.pdf</button>
+        <AboutMe />
       </div>
+      <div>
+        <TechTicker />
       </div>
     </section>
+
     </>
   )
 }

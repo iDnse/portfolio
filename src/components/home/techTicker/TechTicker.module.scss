@@ -1,0 +1,71 @@
+@use '../../../styles/variables' as *;
+
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tickerWrapper {
+  width: 780px;
+  overflow: hidden;
+  background: $mostaza;
+  padding: 4px 0;
+  border-radius: 10px;
+
+  .tickerContainer {
+    max-width: 95%;
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    .techItem {
+      display: flex;
+      align-items: center;
+      margin: 0 12px;
+      gap: 4px;
+      white-space: nowrap;
+
+      svg {
+        flex-shrink: 0;
+      }
+
+      .techName {
+        font-weight: bold;
+        font-family: 'Sansita';
+        font-size: $text-regular;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .container{
+    .tickerWrapper{
+      max-width: 95%;
+
+      .tickerContainer{
+        .techItem{
+          .techName{
+            font-size: $text-xsmall;
+          }
+        }
+
+      }
+    }
+  }
+}
